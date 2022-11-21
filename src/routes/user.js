@@ -9,7 +9,6 @@ userRouter.get('/users', (req, res) => {
         .find()
         .then((data) => res.json(data))
         .catch((err) => res.json({message: err}));
-    
 });
 
 
