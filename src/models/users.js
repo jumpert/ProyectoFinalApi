@@ -3,24 +3,27 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     _id: { 
         type: Number,
-        AutoIncrement: true,
-        required: true,
+        required: true
     },
     firstName: {
         type: String,
-        required: true,
+        required: true
     },
     email: {
         type: String,
-        required: true,
+        required: true
     },
     password: {
         type: String,
-        required: true,
+        required: true
     },
     profileImg: {
         type: String,
-        required: true,
+        required: true
+    },
+    cart: {
+        type: [String],
+        required: false
     }
 })
 

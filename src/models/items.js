@@ -27,7 +27,7 @@ const itemSchema = new mongoose.Schema({
         required: true,
     },
     imageSrc: {
-        type: String,
+        type: Number,
         required: true,
     }
 });
