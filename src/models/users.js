@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     cart: {
-        type: [String],
+        type: [Number],
         required: false
     }
 })

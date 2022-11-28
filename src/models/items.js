@@ -10,6 +10,10 @@ const itemSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    imageSrc: {
+        type: String,
+        required: true,
+    },
     name: {
         type: String,
         required: true,
@@ -24,10 +28,6 @@ const itemSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: true,
-    },
-    imageSrc: {
-        type: Number,
         required: true,
     }
 });
