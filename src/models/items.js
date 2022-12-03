@@ -9,6 +9,8 @@ const itemSchema = new mongoose.Schema({
     type: {
         type: String,
         required: true,
+        lowercase: true,
+        minlenght: 4,
     },
     imageSrc: {
         type: String,
@@ -17,18 +19,22 @@ const itemSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+        minlenght: 3,
     },
     price: {
         type: Number,
         required: true,
+        min: 1,
     },
     quantity: {
         type: Number,
         required: true,
+        min: 1,
     },
     description: {
         type: String,
         required: true,
+        minlenght: 10,
     }
 });
 

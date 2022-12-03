@@ -37,3 +37,9 @@ Content-Type: application/json
 ###
 DELETE   http://localhost:3000/api/v1/shoppingCart/3 HTTP/1.1
 
+###
+GET url HTTP/1.1
+
+
+###
+GET http://localhost:3000/api/v1/items/type/bebidas1 HTTP/1.1

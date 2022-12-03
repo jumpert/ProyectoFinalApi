@@ -7,24 +7,36 @@ const userSchema = new mongoose.Schema({
     },
     firstName: {
         type: String,
-        required: true
+        required: true,
+        minlenght: 3,
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        minLenght: 8,
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        minlenght: 6,
     },
     profileImg: {
         type: String,
-        required: true
+        required: true,
+        minlenght: 10,
     },
     cart: {
-        type: [Number],
+        type: [Number],  
         required: false
     }
 })
+/*
+userSchema.methods.regrats = function() {
+    console.log('Sorry, ' + this.firstName + ' ' + this.email + '!');
+}
 
+userSchema.query.byName = function(name) {
+    return this.where({ firstName: new RegExp(name, 'e') });
+}
+*/
 module.exports = mongoose.model('User', userSchema);

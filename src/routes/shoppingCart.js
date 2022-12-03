@@ -40,13 +40,6 @@ sCRouter.delete('/shoppingCart/:id', (req, res) => {
         .catch((err) => res.json({message: err}));
 });
 
-const removeItem = sCRouter.put('/shoppingCart/:id', (req, res) => {
-    const {id} = req.params;
-    const {cart} = req.body;  
-    sCSchema
-        .updateOne( {_id: 3}, {$pull: {cart: id}})
-        .then((data) => res.json(data))
-        .catch((err) => res.json({message: err}));
-});
+
 
 module.exports = sCRouter;

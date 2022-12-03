@@ -16,7 +16,7 @@ const version = 'v1';
 app.use(morgan('dev'))
 app.use(express.json());
 app.use(cors());
-app.use('/api/' + version, shoppingCartRoutes);
+//app.use('/api/' + version, shoppingCartRoutes);
 app.use('/api/' + version, itemRoutes);
 app.use('/api/' + version, userRoutes);
 
